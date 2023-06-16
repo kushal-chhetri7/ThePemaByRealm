@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/logo_white.png">
+
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/newroomtype.css">
+
+    <title>Edit QR</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/images/logo_white.png">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/home" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Booking Records</h3>
+                </a>
+                <a href="/room">
+                    <span class="material-icons-sharp">villa</span>
+                    <h3>Room</h3>
+                </a>
+                <a href="/roomtype">
+                    <span class="material-icons-sharp">library_books</span>
+                    <h3>Room Types</h3>
+                </a>
+                <a href="/customer_record">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Transaction Records</h3>
+                </a>
+                <a href="/QR">
+                    <span class="material-icons-sharp">qr_code_2</span>
+                    <h3>Change QR Code</h3>
+                </a>
+                <a href="/logout">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Edit QR Code</h1>
+            <form action="/posteditQR/<%=updates._id%>" method="post" enctype="multipart/form-data">
+                <div class="wrapper">
+                    <div class="form">
+                        <div class="input_field">
+                            <label>
+                                Account Number:
+                            </label>
+                            <input name="account_number" value="<%=updates.account_number%>" placeholder="" class="" id="">
+                        </div>
+
+                        <div class="input_field">
+                            <label>
+                                Select QR Picture:
+                            </label>
+                            <input type="file" name="image" value="<%=updates.QR_picture%>" placeholder=""
+                                class="picture" id="">
+                        </div>
+                       
+                        <div class="btn2">
+                            <button type="submit" class="btn btn-primary mb-3">update</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <!------------ End Of Main ------------>
+
+
+    </div>
+
+    <script src="/js/home.js"></script>
+
+    </div>
+</body>
+
+</html>

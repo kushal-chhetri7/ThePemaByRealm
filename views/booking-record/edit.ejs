@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/addnew.css">
+    <link rel="icon" type="image/png" href="./images/logo_white.png">
+
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Edit Record</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/images/logo_white.png">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/home" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Booking Records</h3>
+                </a>
+                <a href="/room">
+                    <span class="material-icons-sharp">villa</span>
+                    <h3>Room</h3>
+                </a>
+                <a href="/roomtype">
+                    <span class="material-icons-sharp">library_books</span>
+                    <h3>Room Types</h3>
+                </a>
+                <a href="/customer_record">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Transaction Records</h3>
+                </a>
+                <a href="/QR">
+                    <span class="material-icons-sharp">qr_code_2</span>
+                    <h3>Change QR Code</h3>
+                </a>
+                <a href="/logout">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Enter Booking Details</h1>
+            <form action="/record-update/<%=updates._id%>" method="post">
+                <div class="wrapper">
+                    <div class="form">
+
+                        <div class="input_field">
+                            <label>
+
+                                <i class="fa fa-user"></i>
+                                Check_In:
+                            </label for="startDate">
+                            <!-- <input name="check_in" value="<%=updates.check_in%>" type="date" placeholder="" class=""
+                                id=""> -->
+                            <input type="text" id="startDate" type="text" name="check_in" value="<%=updates.check_in%>">
+                        </div>
+                        <div class="input_field">
+                            <label>
+
+                                <i class="fa fa-envelope"></i>
+                                Check_Out:
+                            </label for="endDate">
+                            <input type="text" id="endDate" type="text" name="check_out" value="<%=updates.check_out%>">
+                        </div>
+
+                        <div class="input_field">
+                            <label>
+                                <i class="fa fa-calendar"></i>
+                                name:
+
+                            </label>
+                            <input name="name" value="<%=updates.name%>" placeholder="" class="" id="">
+                        </div>
+                        <div class="input_field">
+                            <label>
+                                <i class="fa fa-calendar"></i>
+                                email:
+                            </label>
+                            <input name="email" value="<%=updates.email%>" placeholder="" class="" id="">
+                        </div>
+                        <div class="input_field">
+                            <label>
+
+                                <i class="fa fa-users"></i>
+                                Contact Number:
+                            </label>
+                            <input name="contactNumber" value="<%=updates.contactNumber%>" placeholder="" class=""
+                                id="">
+                        </div>
+                        <div class="input_field">
+                            <label>
+                                <i class="fa fa-hotel"></i>
+                                Special Requirement:
+                            </label>
+                            <input name="specialRequirement" value="<%=updates.specialRequirement%>" placeholder=""
+                                class="" id="">
+                        </div>
+                        <div class="input_field">
+                            <label>
+                                <i class="fa fa-address-card"></i>
+                                Adult:
+                            </label>
+                            <input name="adult" value="<%=updates.adult%>" placeholder="" class="" id="">
+                        </div>
+                        <div class="input_field">
+                            <label>
+                                <i class="fa fa-dollar"></i>
+                                Child:
+                            </label>
+                            <input name="child" value="<%=updates.child%>" placeholder="" class="" id="">
+                        </div>
+                        <div class="input_field">
+                            <label>
+                                <i class="fa fa-dollar"></i>
+                                Transaction ID:
+                            </label>
+                            <input name="transactionID" value="<%=updates.transactionID%>" placeholder="" class=""
+                                id="">
+                        </div>
+                        <div class="input_field">
+                            <label>
+                                <i class="fa fa-dollar"></i>
+                                Total Amount:
+                            </label>
+                            <input name="response" value="<%=updates.response%>" placeholder="" class="" id="">
+                        </div>
+                        <div class="input_field">
+                            <label>
+                                <i class="fa fa-dollar"></i>
+                                Category:
+                            </label>
+                            <input name="category" value="<%=updates.category%>" placeholder="" class="" id="">
+                        </div>
+                        <div class="input_field">
+                            <label>
+                                <i class="fa fa-dollar"></i>
+                                Room Numbers:
+                            </label>
+                            <input name="roomNumbers" value="<%=updates.roomNumbers%>" placeholder="" class="" id="">
+                        </div>
+
+                        <div class="btn2">
+                            <button type="submit" href="/home" class="btn btn-primary mb-3">Update</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </main>
+
+        <!------------ End Of Main ------------>
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <!-- <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Ngawang</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./images/admin.jpg">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/home.js"></script>
+    <script>
+        // Initialize Pikaday date picker for start date
+        var startDatePicker = new Pikaday({
+            field: document.getElementById('startDate'),
+            format: 'YYYY-MM-DD'
+        });
+
+        // Initialize Pikaday date picker for end date
+        var endDatePicker = new Pikaday({
+            field: document.getElementById('endDate'),
+            format: 'YYYY-MM-DD'
+        });
+    </script>
+
+    </div>
+</body>
+
+</html>

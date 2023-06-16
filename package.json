@@ -1,0 +1,33 @@
+{
+  "name": "pema-hotel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "canvas": "^2.11.2",
+    "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
+    "currency-converter-lt": "^2.0.0-beta.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.1.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.2",
+    "nodemon": "^2.0.22",
+    "start": "^5.1.0",
+    "stripe": "^12.5.0"
+  }
+}

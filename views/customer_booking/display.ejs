@@ -1,0 +1,657 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+   
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="./images/logo_white.png">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/css/display.css" rel="stylesheet">
+
+    <style>
+        .room-number input[type="checkbox"] {
+          transform: scale(1.2);
+          margin-right: 10px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+               
+       
+               
+        
+        header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Add this line */
+}
+
+.logo {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            max-width: 70px;
+            /* Increase the maximum width to make the logo bigger */
+            height: auto;
+            margin-left: 10px;
+        }
+
+.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navigation li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+.navigation li:last-child {
+    margin-right: 50px; /* Increase the margin value as needed */
+}
+
+.sidebar-toggle {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Change 'left' to 'right' and adjust the value */
+    width: 250px;
+    height: 100%;
+    background-color: #f7f7f7;
+    padding: 20px;
+    transition: right 0.3s ease; /* Change 'left' to 'right' */
+    z-index: 3;
+}
+
+.sidebar-content {
+    position: relative;
+}
+
+
+.close {
+        font-size: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .navigation {
+            display: none;
+        }
+
+        .navigation.active {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            z-index: 2;
+        }
+
+        .navigation.active li {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+        }
+    }
+
+.centered-image {
+        display: block;
+        margin: 20px auto; /* Adjust the margin value as needed */
+        max-width: 200px; /* Adjust the width as needed */
+        height: auto;
+    }
+    .contact-heading {
+        
+        text-align: center;
+    }  
+        .footer {
+            background-color: #C59D5F;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+    }
+    .logo img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+}
+    
+    .footer a {
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .social-icons {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .social-icons li {
+        margin-right:3.4rem;
+    }
+    
+    .social-icons a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 30px;
+        text-align: center;
+    
+    }
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.social-icons img:hover {
+    filter: grayscale(0%);
+}
+
+.footer-logo img{
+    width:150px;
+    height: auto;
+}
+
+.contact h5{
+    font-family:"Nunito Sans",sans-serif;
+    font-size:30px;
+    font-weight:600;
+    line-height:1.4em;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+}
+.content p{
+    font-size:14px;
+    font-weight: 400;
+    line-height: 2em;
+}
+.content1 p{
+    display: inline-block;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size:14px;
+    font-weight: 400;
+    line-height: 2em;
+    margin-top: 2rem;
+}
+.content{
+    margin-top: 20px;
+}
+.content a{
+    color:#fff;
+    font-size:14px;
+    font-weight:400;
+    cursor: pointer;
+} 
+.content a:hover{
+    color:black;
+}
+.copy{
+    margin-top:10px;
+    font-weight:400;
+    font-size: 14px;
+}
+ @media (max-width: 991px){
+    .footer-logo{
+        margin-top: 3rem;
+    }
+ }
+ @media (max-width: 800px){
+    .social-icons img:hover {
+        filter: grayscale(0%);
+    }
+ }
+ 
+ @media (max-width: 412px) {
+  .footer-logo {
+    margin-top: 3rem;
+  }
+  .social-icons li {
+    margin-right: 1.4rem;
+  }
+}
+ @media (max-width: 412px){
+    .content1 p{
+        font-size: 14px;
+
+    }
+
+ }
+      </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="container1">
+            <div class="logo">
+                <img src="/images/new.png" alt="Logo">
+            </div>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="http://www.realmbhutan.com">Home</a></li>
+                </ul>
+                <div class="sidebar-toggle" onclick="toggleSidebar()">
+                    &#9776;
+                </div>
+            </nav>
+        </div>
+        
+    </header>
+
+    <div id="sidebar">
+        <div class="sidebar-content">
+            <div class="close" onclick="closeSidebar()">
+                &times;
+            </div>
+            <br><br><br>
+            <img src="/images/logo_colours.png" alt="Image" class="centered-image">
+            <br><br>
+            <div class="contact-heading" >
+                <p><b>Contact</b></p>
+        <p>The Pema by Realm, Thori Lam, Thimphu, Bhutan</p>
+        <p>stay@thepemahotel.com</p>
+        <p>(975) 2338888</p>
+        <br>
+        <br>
+
+        <p>Follow</p>
+
+            </div>
+            
+            <div class="close" onclick="closeSidebar()">
+                &times;
+            </div>
+        </div>
+    </div>
+
+    <section class="book" id="reserve">
+        <div class="formreserve">
+            <div class="main-text">
+                <h1>
+                    <span>R</span>ESERVATION <span>F</span>ORM </span>
+                </h1>
+            </div>
+            <div class="row">
+                <!--  <div class="col-md-7 py-3 py-md-0"><div class="card"><img src="http://139.59.46.216/wp-content/uploads/2023/04/Gallery_EVENTS-1024x683.jpg" alt=""></div></div> -->
+                <div class="col-md-7 py-3 py-md-0" style="margin: 4% auto">
+                    <form  action="/display-available-rooms" method="POST" name="Form" onsubmit="return validateForm()">
+
+                        <div class="box">
+                            
+                            <label>Room Name:</label>
+                            <input type="text" id="" name="category" value="<%=category%>" readonly>
+                            
+                        </div>
+                        <div class="box">
+                            
+                            <label>Check In:</label>
+                            <input type="text" id="" name="check_in" value="<%=check_in%>" readonly>
+                            
+                        </div>
+                        <div class="box">
+                            
+                            <label>Check Out:</label>
+                            <input type="text" id="" name="check_out" value="<%=check_out%>" readonly>
+                            
+                        </div>
+                        <div class="box">
+                            
+                            <label>Name:</label>
+                            <input type="text" id="name" name="name"   placeholder="Enter your name">
+                            <div class="error" id="nameErr"></div>
+                        </div>
+                        <div class="box">
+                           
+                            <label>Email Address:</label>
+                            <input type="text" placeholder="Enter your email" name="email" id="email">
+                            <div class="error" id="emailErr"></div>
+                        </div>
+                        <div class="box">
+                            
+                            <label>Contact Number:</label>
+                            <input type="text" placeholder="Enter your phone number" name="contact" id="mobile"
+                                minlenght="8">
+                            <div class="error" id="mobileErr"></div>
+                        </div>
+
+                        <div class="box">
+                            
+                            <label>Special Requirement:</label>
+                            <textarea placeholder="Any special requirement needed?"
+                                class="textarea shadow-none" name="specialRequirement"></textarea>
+                        </div>
+
+                        <div class="box">
+                            
+                            <label>Adult:</label>
+                            <input type="text" placeholder="Enter your Adult" name="adult" id="adult">
+                            <div class="error" id="adultErr"></div>
+
+                        </div>
+
+                        <div class="box">
+                            
+                            <label>Child: (Age 0-6 Is Complementary)</label>
+                            <input type="text" placeholder="Enter your Child" name="child" id="child" value="0">   
+                            <div class="error" id="childErr"></div>
+                            
+                        </div>
+
+                        
+                        <div class="col-xs-12 padding-top-5 room-selection-wrapper js-rooms-container center-align">
+                            <div id="roomContainer-1" class="clearfix additional-room-container each-room-wrapper top-border js-room-search-container existing-room">
+                              <div class="room-number col-xs-2" style="color:#fff; margin-top: 20px; margin-left: 20%; display: flex; flex-wrap: wrap;">
+                                <% for(const key in pemaRoom){ %>
+                                  <div style="width: 50%;">
+                                    <input type="checkbox" id="room<%= key %>" name="room_number" value="<%= pemaRoom[key] %>">
+                                    <label for="room<%= key %>"><%= pemaRoom[key] %></label>
+                                  </div>
+                                <% } %>
+                                <span class="js-room-counter room-counter"></span>
+                              </div>
+                            </div>
+                          </div>
+                          
+
+                          
+                        <div class="box">
+                            <input type="submit" value="Confirm Booking" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+<div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+            <div class="contact">
+                <h5>Contact</h5>
+                <div class="content">
+                    <p>The pema by Realm, Thori Lam, Lower <br> Motithang, Thimphu, Bhutan <br>stay@thepemahotel.com <br>
+                        <a href="tel:(975) 2338888">(975) 2338888,</a>
+                        <a href="tel:(975) 2338888">(975) 17279401</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+            <div class="footer-logo">
+                <img src="/images/new.png" alt="Hotel Logo">
+            </div>
+            <div class="content1">
+                <p>Realm Hospitality is a local boutique hotel management company promoting sustainable tourism in Bhutan and showcasing
+                    the best of authentic local hospitality. Impeccable service, attention to detail, unique heritage-contemporary design
+                    paired with all the comforts of modern luxury are the hallmarks of The Pema by Realm.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <ul class="social-icons">
+            <li><a href="https://www.facebook.com/thepemabyrealm" target="_blank"><img src="http://139.59.46.216/wp-content/uploads/2022/09/face.png" class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/thepemabhutan/"><img src="http://139.59.46.216/wp-content/uploads/2022/10/igc.png" class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.tripadvisor.com/Hotel_Review-g293845-d17479982-Reviews-The_Pema_by_Realm-Thimphu_Thimphu_District.html" target="_blank"><img src="http://139.59.46.216/wp-content/uploads/2022/09/trip.png" class="fab fa-tripadvisor"></i></a></li>
+            <li><a href="https://api.whatsapp.com/send/?phone=97517279401&text&type=phone_number&app_absent=0" target="_blank"><img src="http://139.59.46.216/wp-content/uploads/2023/03/whatsapp-e1677730973801.png" class="fab fa-whatsapp"></i></a></li>
+          </ul>
+        </div>
+        <div class="copy">
+            <p>Copyright © 2023 The Pema by Realm. ALL RIGHTS RESERVED</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        var name = document.forms["Form"]["name"].value;
+        var contact = document.forms["Form"]["contact"].value;
+        var email = document.forms["Form"]["email"].value;
+        var adult = document.forms["Form"]["adult"].value;
+        var child = document.forms["Form"]["child"].value;
+
+        // Validate name field
+        if (name === "") {
+            document.getElementById("nameErr").innerHTML = "Name is required.";
+            return false;
+        } else if (!isNaN(parseFloat(name)) && isFinite(name)) {
+            document.getElementById("nameErr").innerHTML = "Name should not be a number-only string.";
+            return false;
+        }
+        // Validate email field
+        if (email === "") {
+            document.getElementById("emailErr").innerHTML = "Email is required.";
+            return false;
+        } else {
+            // Regular expression pattern for email validation
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailErr").innerHTML = "Invalid email format.";
+                return false;
+            }
+        }
+
+        // Validate contact number field
+        if (contact === "" || contact.length < 7 || contact.length > 16) {
+            document.getElementById("mobileErr").innerHTML = "Contact number should be between 7 to 15 digits";
+            return false;
+        }
+
+
+        // Validate adult field
+    if (adult === "" || isNaN(adult) || parseInt(adult) < 1) {
+    document.getElementById("adultErr").innerHTML = "Please enter a valid number of adults.";
+    return false;
+} 
+if (!/^\d+$/.test(child) || parseInt(child) < 0) {
+    document.getElementById("childErr").innerHTML = "Please enter a valid number of children (must be a non-negative integer).";
+    return false;
+}
+
+
+
+        return true;
+    }
+</script>
+
+
+<script>
+
+        //Increment and decrement counter
+        function initializeRoom(roomNumber) {
+            var roomContainer = document.getElementById('roomContainer-' + roomNumber);
+
+            var decrementButton = roomContainer.querySelector('.js-decrement-guest-count');
+            var adultCountInput = roomContainer.querySelector('.js-num-adults');
+
+            decrementButton.addEventListener('click', function () {
+                var currentCount = parseInt(adultCountInput.value);
+                if (currentCount > 1) {
+                    adultCountInput.value = currentCount - 1;
+                }
+            });
+
+            var incrementButton = roomContainer.querySelector('.js-increment-guest-count');
+            incrementButton.addEventListener('click', function () {
+                var currentCount = parseInt(adultCountInput.value);
+                if (currentCount < 3) {
+                    adultCountInput.value = currentCount + 1;
+                }
+            });
+
+            var decrementButtonChildren = roomContainer.querySelector('.js-decrement-children-count');
+            var childrenCountInput = roomContainer.querySelector('.js-num-children');
+
+            decrementButtonChildren.addEventListener('click', function () {
+                var currentCount = parseInt(childrenCountInput.value);
+                if (currentCount > 0) {
+                    childrenCountInput.value = currentCount - 1;
+                }
+            });
+
+            var incrementButtonChildren = roomContainer.querySelector('.js-increment-children-count');
+            incrementButtonChildren.addEventListener('click', function () {
+                var currentCount = parseInt(childrenCountInput.value);
+                if (currentCount < 1) {
+                    childrenCountInput.value = currentCount + 1;
+                }
+            });
+
+
+            var cancelIcon = roomContainer.querySelector('.cancel-icon');
+            cancelIcon.addEventListener('click', function (event) {
+                event.stopPropagation(); // Stop event propagation
+
+                var roomToRemove = document.getElementById('roomContainer-' + roomNumber);
+                roomToRemove.parentNode.removeChild(roomToRemove);
+            });
+        }
+
+        var roomCounter = 2; // Start with Room 2
+
+        var addRoomButton = document.querySelector('.js-add-room');
+        addRoomButton.addEventListener('click', function () {
+            var roomContainer = document.createElement('div');
+            roomContainer.id = 'roomContainer-' + roomCounter;
+            roomContainer.className = 'clearfix additional-room-container each-room-wrapper top-border js-room-search-container';
+
+            var cancelIcon = document.createElement('i');
+            cancelIcon.className = 'cancel-icon fa fa-times-circle';
+            cancelIcon.setAttribute('aria-hidden', 'true');
+            cancelIcon.addEventListener('click', function (event) {
+                event.stopPropagation(); // Stop event propagation
+
+                var roomToRemove = document.getElementById('roomContainer-' + roomCounter);
+                roomToRemove.parentNode.removeChild(roomToRemove);
+            });
+
+            roomContainer.appendChild(cancelIcon);
+
+            var roomNumber = document.createElement('div');
+            roomNumber.className = 'room-number col-xs-2 room-number-white';
+            roomNumber.innerHTML = 'Room <span class="js-room-counter room-counter" style="color:#fff">' + roomCounter + '</span>';
+
+            var roomWrapper = document.createElement('div');
+            roomWrapper.className = 'col-xs-10 col-xs-10-wrapper';
+
+            var roomRow = document.createElement('div');
+            roomRow.className = 'row room-wrapper';
+
+            var adultsBlock = document.createElement('div');
+            adultsBlock.className = 'default-room-block';
+            adultsBlock.innerHTML = '<span class="element-label adults-header" style="color:#fff"> Adults </span>' +
+                '<div class="room-increment-parent js-guest-counter" style="margin-top: 20px">' +
+                '<input type="button" value="-" class="num-minus js-decrement-guest-count">' +
+                '<input type="text" name="quantity" value="1" data-default-value="1" class="guest-count js-guest-count js-num-adults" disabled="disabled">' +
+                '<input type="button" value="+" class="num-plus js-increment-guest-count">' +
+                '</div>';
+
+            var childrenBlock = document.createElement('div');
+            childrenBlock.className = 'default-room-block';
+            childrenBlock.innerHTML = '<span class="element-label children-header" style="color:#fff"> Children <span class="js-children-age"> (0 - 17 years) </span></span>' +
+                '<div class="room-increment-parent js-guest-counter">' +
+                '<input type="button" value="-" class="num-minus js-decrement-children-count">' +
+                '<input type="text" name="quantity" value="0" data-default-value="0" data-room-index="' + roomCounter + '" class="guest-count js-guest-count js-num-children" disabled="disabled">' +
+                '<input type="button" value="+" class="num-plus js-increment-children-count">' +
+                '</div>';
+
+            roomRow.appendChild(adultsBlock);
+            roomRow.appendChild(childrenBlock);
+            roomWrapper.appendChild(roomRow);
+            roomContainer.appendChild(roomNumber);
+            roomContainer.appendChild(roomWrapper);
+
+            var roomSelectionWrapper = document.querySelector('.js-rooms-container');
+            roomSelectionWrapper.appendChild(roomContainer);
+            roomSelectionWrapper.classList.add('center-align');
+
+            initializeRoom(roomCounter);
+
+            roomCounter++;
+        });
+
+        initializeRoom(1);
+
+
+
+
+
+    </script>
+    
+    <script>
+        //     function toggleSidebar() {
+        //     var navigation = document.querySelector('.navigation');
+        //     navigation.classList.toggle('active');
+        // }
+            function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        if (sidebar.style.right === "-250px") { /* Change 'left' to 'right' */
+            sidebar.style.right = "0"; /* Change 'left' to 'right' */
+        } else {
+            sidebar.style.right = "-250px"; /* Change 'left' to 'right' */
+        }
+    }
+    
+    function closeSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.style.right = "-250px"; /* Change 'left' to 'right' */
+    }
+    
+    function toggleSidebar1() {
+            var sidebar = document.getElementById("customSidebar");
+            sidebar.classList.toggle("sidebar-open");
+        }
+    
+        function closeSidebar1() {
+            var sidebar = document.getElementById("customSidebar");
+            sidebar.classList.remove("sidebar-open");
+        }
+    
+    
+        </script>
+</body>
+
+</html>

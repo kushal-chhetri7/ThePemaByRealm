@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="./images/logo_white.png">
+        <title>Success Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <link href="/css/success.css" rel="stylesheet">
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+                   
+            header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Add this line */
+}
+
+.logo {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            max-width: 70px;
+            /* Increase the maximum width to make the logo bigger */
+            height: auto;
+            margin-left: 10px;
+        }
+
+.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navigation li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+.navigation li:last-child {
+    margin-right: 50px; /* Increase the margin value as needed */
+}
+
+.sidebar-toggle {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Change 'left' to 'right' and adjust the value */
+    width: 250px;
+    height: 100%;
+    background-color: #f7f7f7;
+    padding: 20px;
+    transition: right 0.3s ease; /* Change 'left' to 'right' */
+    z-index: 3;
+}
+
+.sidebar-content {
+    position: relative;
+}
+
+
+.close {
+        font-size: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .navigation {
+            display: none;
+        }
+
+        .navigation.active {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            z-index: 2;
+        }
+
+        .navigation.active li {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+        }
+    }
+
+.centered-image {
+        display: block;
+        margin: 20px auto; /* Adjust the margin value as needed */
+        max-width: 200px; /* Adjust the width as needed */
+        height: auto;
+    }
+    .contact-heading {
+        
+        text-align: center;
+    } 
+  /* footer */
+
+  
+  /* footer */
+
+        /* footer */
+        .footer {
+            background-color: #C59D5F;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+    }
+    .logo img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+}
+    
+    .footer a {
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .social-icons {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .social-icons li {
+        margin-right:3.4rem;
+    }
+    
+    .social-icons a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 30px;
+        text-align: center;
+    
+    }
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.social-icons img:hover {
+    filter: grayscale(0%);
+}
+
+.footer-logo img{
+    width:150px;
+    height: auto;
+}
+
+.contact h5{
+    font-family:"Nunito Sans",sans-serif;
+    font-size:30px;
+    font-weight:600;
+    line-height:1.4em;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+}
+.content p{
+    font-size:14px;
+    font-weight: 400;
+    line-height: 2em;
+}
+.content1 p{
+    display: inline-block;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size:14px;
+    font-weight: 400;
+    line-height: 2em;
+    margin-top: 2rem;
+}
+.content{
+    margin-top: 20px;
+}
+.content a{
+    color:#fff;
+    font-size:14px;
+    font-weight:400;
+    cursor: pointer;
+} 
+.content a:hover{
+    color:black;
+}
+.copy{
+    margin-top:10px;
+    font-weight:400;
+    font-size: 14px;
+}
+ @media (max-width: 991px){
+    .footer-logo{
+        margin-top: 3rem;
+    }
+ }
+ @media (max-width: 800px){
+    .social-icons img:hover {
+        filter: grayscale(0%);
+    }
+ }
+ 
+ @media (max-width: 412px) {
+  .footer-logo {
+    margin-top: 3rem;
+  }
+  .social-icons li {
+    margin-right: 1.4rem;
+  }
+}
+ @media (max-width: 412px){
+    .content1 p{
+        font-size: 14px;
+
+    }
+
+ }
+    </style>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="container1">
+                <div class="logo">
+                    <img src="/images/new.png" alt="Logo">
+                </div>
+                <nav>
+                    <ul class="navigation">
+                        <li><a href="http://www.realmbhutan.com">Home</a></li>
+                    </ul>
+                    <div class="sidebar-toggle" onclick="toggleSidebar()">
+                        &#9776;
+                    </div>
+                </nav>
+            </div>
+        
+            
+        
+        
+            
+        </header>
+        
+        <div id="sidebar">
+            <div class="sidebar-content">
+                <div class="close" onclick="closeSidebar()">
+                    &times;
+                </div>
+                <br><br><br>
+                <img src="/images/logo_colours.png" alt="Image" class="centered-image">
+                <br><br>
+                <div class="contact-heading" >
+                    <p><b>Contact</b></p>
+            <p>The Pema by Realm, Thori Lam, Thimphu, Bhutan</p>
+            <p>stay@thepemahotel.com</p>
+            <p>(975) 2338888</p>
+            <br>
+            <br>
+        
+            <p>Follow</p>
+        
+            <!-- <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="email-icon.png" alt="Email"></a>
+            </div> -->
+                </div>
+                
+                <div class="close" onclick="closeSidebar()">
+                    &times;
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <div>
+                <div class="mb-4 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75"
+                        fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+                <div class="text-center">
+                    <h1>Thank You !</h1>
+                    <p>Please wait for a while for your journal number to be verified. You will reveive an email weather your booking is being confirmed along with the booking receipt. </p>
+                    <button class="btn btn-primary custom-button"><a href="http://www.realmbhutan.com" style="color: #fff; text-decoration: none;">Back Home</a></button>
+                </div>
+            </div>
+        </div>
+
+          
+<div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+            <div class="contact">
+                <h5>Contact</h5>
+                <div class="content">
+                    <p>The pema by Realm, Thori Lam, Lower <br> Motithang, Thimphu, Bhutan <br>stay@thepemahotel.com <br>
+                        <a href="tel:(975) 2338888">(975) 2338888,</a>
+                        <a href="tel:(975) 2338888">(975) 17279401</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+            <div class="footer-logo">
+                <img src="/images/new.png" alt="Hotel Logo">
+            </div>
+            <div class="content1">
+                <p>Realm Hospitality is a local boutique hotel management company promoting sustainable tourism in Bhutan and showcasing
+                    the best of authentic local hospitality. Impeccable service, attention to detail, unique heritage-contemporary design
+                    paired with all the comforts of modern luxury are the hallmarks of The Pema by Realm.</p>
+            </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-12">
+          <ul class="social-icons">
+            <li><a href="https://www.facebook.com/thepemabyrealm" target="_blank"><img src="http://139.59.46.216/wp-content/uploads/2022/09/face.png" class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/thepemabhutan/"><img src="http://139.59.46.216/wp-content/uploads/2022/10/igc.png" class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.tripadvisor.com/Hotel_Review-g293845-d17479982-Reviews-The_Pema_by_Realm-Thimphu_Thimphu_District.html" target="_blank"><img src="http://139.59.46.216/wp-content/uploads/2022/09/trip.png" class="fab fa-tripadvisor"></i></a></li>
+            <li><a href="https://api.whatsapp.com/send/?phone=97517279401&text&type=phone_number&app_absent=0" target="_blank"><img src="http://139.59.46.216/wp-content/uploads/2023/03/whatsapp-e1677730973801.png" class="fab fa-whatsapp"></i></a></li>
+          </ul>
+        </div>
+        <div class="copy">
+            <p>Copyright © 2023 The Pema by Realm. ALL RIGHTS RESERVED</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <script>
+        //     function toggleSidebar() {
+        //     var navigation = document.querySelector('.navigation');
+        //     navigation.classList.toggle('active');
+        // }
+            function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        if (sidebar.style.right === "-250px") { /* Change 'left' to 'right' */
+            sidebar.style.right = "0"; /* Change 'left' to 'right' */
+        } else {
+            sidebar.style.right = "-250px"; /* Change 'left' to 'right' */
+        }
+      }
+      
+      function closeSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.style.right = "-250px"; /* Change 'left' to 'right' */
+      }
+      
+      function toggleSidebar1() {
+            var sidebar = document.getElementById("customSidebar");
+            sidebar.classList.toggle("sidebar-open");
+        }
+      
+        function closeSidebar1() {
+            var sidebar = document.getElementById("customSidebar");
+            sidebar.classList.remove("sidebar-open");
+        }
+      
+      
+        </script>
+
+    </body>
+
+</html>

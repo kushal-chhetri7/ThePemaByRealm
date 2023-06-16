@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 57%;
+    right: 2rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#password {
+    padding-right: 7rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+header img {
+    margin-left: -40px;
+    margin-top: 14px;
+    height: 70px;
+    width: 70px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('public/images/pemahome.jpg');
+    background-size: cover;
+    background-position: cover;
+    color: #fff;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 380px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height .2s ease;
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0)
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #C88A2E;
+    font-size: 2em;
+    color: #f7f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-style: 2rem;
+    color: #f7f3f3;
+    margin-left: 58px;
+}
+
+.form-box h4 {
+    font-size: 0.9rem;
+    color: #f7f3f3;
+    font-weight: 300;
+    margin: -15px 0 15px;
+    display: flex;
+    text-align: center;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #beb6b6;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 300;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #f7f3f3;
+    font-weight: 400;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2rem;
+    color: #f7f3f3;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: 0.9rem;
+    color: #f7f3f3;
+    font-weight: 300;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #f7f3f3;
+    font-weight: 300;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #f7f3f3;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #f7f3f3;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background-color: #C88A2E;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #f7f3f3;
+    text-align: center;
+    font-weight: 300;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    text-decoration: none;
+    color: #f7f3f3;
+    font-weight: 400;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+.register h2 {
+    margin-left: 80px;
+}

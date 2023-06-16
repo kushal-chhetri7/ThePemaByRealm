@@ -1,0 +1,653 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-size: 0.77rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+.profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted {
+    color: #7d8da1;
+}
+
+p {
+    color: #677483;
+}
+
+b {
+    color: #363949;
+}
+
+.primary {
+    color: #7380ec;
+}
+
+.danger {
+    color: #ff7782;
+}
+
+.success {
+    color: #41f1b6;
+}
+
+.warning {
+    color: #ffbb55;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: #f6f6f9;
+    user-select: none;
+    overflow-x: hidden;
+    color: #363949;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto;
+}
+
+/* aside */
+
+aside {
+    height: 88vh;
+    width: 16rem;
+    background: #333132;
+}
+
+aside .top {
+    background: #333132;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+aside .logo {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+
+aside .top .logo img {
+    width: 6rem;
+    height: 6rem;
+}
+
+aside.open {
+    display: block;
+}
+
+aside.close {
+    display: block;
+}
+
+aside .sidebar {
+    background: #333132;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    top: 3rem;
+}
+
+aside h3 {
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: #fff;
+    margin-left: 1.4rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 4.1rem;
+    width: 13.4rem;
+    margin-top: 1rem;
+    transition: all 300ms ease;
+    letter-spacing: 1.2px;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    margin-bottom: -20rem;
+    height: 4rem;
+    width: 13.4rem;
+}
+
+aside .sidebar a:hover {
+    color: #070808;
+    background-color: #D4AC6F;
+    border-radius: 1rem;
+    width: 14rem;
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+/* ---- End Of aside ----*/
+.navbar {
+    margin-left: 4.5rem;
+    margin-top: 3rem;
+}
+
+.navbar .wrapper {
+    padding-left: 2rem;
+    color: #C39C5E;
+}
+
+.navbar .wrapper .search {
+    display: flex;
+    border: 1px solid rgba(13, 14, 23, 0.18);
+    padding-left: 2rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    background-color: #333132;
+    width: 28rem;
+    height: 3rem;
+    margin-bottom: -10px;
+}
+
+.navbar .wrapper .search .material-icons-sharp {
+    font-size: 2.8rem;
+    margin-top: 0.6rem;
+    margin-left: 11rem;
+    color: #fff;
+}
+
+.navbar .wrapper .search input {
+    background: transparent;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.navbar .wrapper .search input::placeholder {
+    font-size: 12;
+    color: #fff;
+}
+
+main {
+    margin-top: 1.4rem;
+    margin-left: 2rem;
+}
+
+.navbar .wrapper main h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+main .table-container {
+    padding: 0 10%;
+    margin: 40px auto 0;
+}
+
+main .table-container table {
+    background: #fff;
+    width: 110%;
+    border-radius: 0.5rem;
+    font-size: 12.5px;
+    padding: 1.6rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: -6rem;
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+    transition: all 300ms ease;
+}
+
+main .table-container table:hover {
+    box-shadow: none;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 36.5rem;
+    height: 4rem;
+    width: 13.4rem;
+    left: 4px;
+}
+
+main table thead tr th {
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(132, 139, 200, 0.18);
+    border-left: 1px solid rgba(132, 139, 200, 0.18);
+}
+
+main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid rgba(132, 139, 200, 0.18);
+    border-left: 1px solid rgba(132, 139, 200, 0.18);
+    color: #666666;
+}
+
+main table tbody tr:last-child td {
+    border-bottom: none;
+    border-left: 1px solid rgba(132, 139, 200, 0.18)
+}
+
+main .table-container table tbody tr td .btn3 {
+    background-color: #fff;
+    cursor: pointer;
+    color: #677483;
+}
+
+main .table-container a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: #7380ec;
+}
+
+.search {
+    position: relative;
+}
+
+.search input[type="text"] {
+    padding-right: 30px;
+}
+
+.search .material-icons {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #fff;
+    cursor: pointer;
+}
+
+.titlee {
+    color: #363949;
+    font-family: poppins, sans-serif;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    margin-left: 0.3rem;
+}
+
+.right {
+    margin-top: 1.4rem;
+}
+
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    width: 12rem;
+    margin-left: 5rem;
+}
+
+.right .top button {
+    display: none;
+}
+
+.right .top .profile {
+    display: flex;
+    gap: 1rem;
+    text-align: right;
+}
+
+#pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#pagination-container button {
+    margin: 0 10px;
+}
+
+
+/* ======== Media Queries ========= */
+/* ==== For Tablab and Small Laptops ==== */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 94%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    main {
+        margin-left: -1rem;
+    }
+
+    aside {
+        background-color: #f6f6f9;
+    }
+
+    aside .close {
+        display: none;
+    }
+
+    .right .top {
+        display: flex;
+        justify-content: end;
+        gap: 2rem;
+        width: 16rem;
+        margin-left: 1rem;
+    }
+
+    .right .top button {
+        display: none;
+    }
+
+    .right .top .profile {
+        display: flex;
+        gap: 1rem;
+        text-align: right;
+    }
+
+    aside .sidebar {
+        background-color: transparent;
+        margin-left: -1rem;
+    }
+
+    aside .sidebar span {
+        color: #677483;
+    }
+
+    aside .top {
+        background-color: #f6f6f9;
+    }
+
+    aside .top .logo {
+        margin-left: -1.6rem;
+        margin-top: 4rem;
+    }
+
+    aside .top .logo img {
+        background-color: rgba(36, 36, 39, 0.18);
+        padding: 1rem;
+    }
+
+    aside .logo h2 {
+        display: none;
+    }
+
+    aside .sidebar h3 {
+        display: none;
+    }
+
+    aside .sidebar a {
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:hover {
+        background-color: #f6f6f9;
+        border-radius: 1rem;
+        width: 1rem;
+    }
+
+    aside .sidebar a:last-child {
+        position: relative;
+        margin-top: 40rem;
+    }
+
+    main .table-container {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+
+    main .btn1 button {
+        margin-left: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* ==== For smaller Tablets and Mobile ==== */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        margin-top: 5rem;
+    }
+
+    aside {
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        width: 18rem;
+        z-index: 3;
+        background-color: #333132;
+        box-shadow: 1rem 3rem 5rem #fff;
+        padding-right: 1.4rem;
+        display: none;
+        animation: showMenu 400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to {
+            left: 0;
+        }
+    }
+
+    aside .top {
+        background-color: #333132;
+    }
+
+    aside .top .logo {
+        margin-top: 8px;
+    }
+
+    aside .top .logo img {
+        background-color: #333132;
+        padding: 1rem;
+        margin-left: 4rem;
+    }
+
+    aside .sidebar {
+        margin-top: -2rem;
+    }
+
+    aside .sidebar h3 {
+        display: inline;
+        color: #fff;
+        padding-left: 1rem;
+    }
+
+    aside .sidebar a {
+        width: 16rem;
+        margin-top: -12px;
+    }
+
+    aside .sidebar a:last-child {
+        margin-top: 46rem;
+    }
+
+    aside .sidebar a:hover {
+        color: #070808;
+        background-color: #D4AC6F;
+        border-radius: 1rem;
+        width: 15rem;
+    }
+
+    aside .sidebar a:hover span {
+        margin-left: 1rem;
+    }
+
+    aside .close {
+        display: inline-block;
+        margin-top: -4rem;
+        margin-left: 4rem;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    main {
+        margin-left: 1rem;
+        padding: 0 1rem;
+    }
+
+    main .navbar .wrapper h1 {
+        margin-left: -3rem;
+        margin-top: -3rem;
+    }
+
+    main .navbar .wrapper .search {
+        margin-left: -4rem;
+        margin-top: -1rem;
+        width: 18rem;
+    }
+
+    main .table-container {
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 10%;
+    }
+
+    main .table-container table {
+        width: 20rem;
+        margin: 0;
+        margin-left: -10rem;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table,
+    table tr,
+    table td {
+        display: block;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+    }
+
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        padding-left: 4rem;
+        text-align: right;
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: -1rem;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    #pagination-container {
+        text-align: center;
+        margin-left: -2rem;
+        top: 10px; 
+        right: 14px; 
+      }
+
+    .container main .recent-orders a {
+        margin-left: 0px;
+    }
+
+    .right {
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background: #fff;
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem rgba(132, 139, 200, 0.18);
+    }
+
+    .right .top button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: #363949;
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right .top button span {
+        font-size: 2rem;
+    }
+
+    main .btn1 {
+        margin-left: 8rem;
+    }
+}

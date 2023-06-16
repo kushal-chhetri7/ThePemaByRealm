@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/logo_white.png">
+
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/newroomtype.css">
+
+    <title>Add Room Type</title>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/logo_white.png">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/home" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Booking Records</h3>
+                </a>
+                <a href="/room">
+                    <span class="material-icons-sharp">villa</span>
+                    <h3>Room</h3>
+                </a>
+                <a href="/roomtype">
+                    <span class="material-icons-sharp">library_books</span>
+                    <h3>Room Types</h3>
+                </a>
+                <a href="/customer_record">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Transaction Records</h3>
+                </a>
+                <a href="/QR">
+                    <span class="material-icons-sharp">qr_code_2</span>
+                    <h3>Change QR Code</h3>
+                </a>
+                <a href="/logout">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1 class="tittlee">Add New QR</h1>
+            <form action="/addQR" method="post" enctype="multipart/form-data">
+                <div class="wrapper">
+                    <div class="form">
+                        <div class="input_field">
+                            <label>
+                                Enter Account Number:
+                            </label>
+                            <input name="account_number" placeholder="" class="" id="">
+                        </div>
+                        
+                        <div class="input_field">
+                            <label>
+                                Select QR Picture:
+                            </label>
+                            <input type="file" name="image">
+                        </div>
+                        <div class="btn2">
+                            <button type="submit" class="btn btn-primary mb-3">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <!------------ End Of Main ------------>
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/addnewroomtype.js"></script>
+
+    </div>
+</body>
+</html>

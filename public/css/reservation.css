@@ -1,0 +1,79 @@
+/* Reservation Summary */
+.container2 {
+    text-align: center;
+    color: white;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    background-color: #333132;
+    padding: 50px 0px;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .container2 .title {
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    color: #c59d5f;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .confirmBtn {
+    height: 4rem;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #c59d5f;
+  }
+  
+  .confirmBtn:hover {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 1px solid #c59d5f;
+    background-color: #333132;
+    color: white;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .input-group1 {
+    font-size: 100%;
+    margin-bottom: 8px;
+    border: 1px solid #c59d5f;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+  }
+  
+  .input-box1 {
+    width: 100%;
+    margin-right: 12px;
+    position: relative;
+  }
+  
+  .input-group1:hover {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    background-color: #333132;
+    color: white;
+  }
+  
+  
